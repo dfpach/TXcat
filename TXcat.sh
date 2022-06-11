@@ -173,7 +173,6 @@ while getopts ":sr:h" opt; do
          portRX=$(Connect_Port $Nadd $Bmask $file_name)
          echo $portRX
          echo file sending process ended.
-          #echo $folder
        ;;
       r) file_name=${OPTARG}
          Find_Interface
