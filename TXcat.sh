@@ -181,9 +181,6 @@ while getopts ":sr:h" opt; do
          mask=$(ifconfig $cur_interface | grep -w "netmask" | sed -n -e 's/^.*netmask //p' | awk '{print $1}')
          Set_Port $IPaddress
          #The port is opened twice: First for ip+port checking and then to receive the file
-         echo $cur_port
-         echo $file_name
-         echo $IPaddress
          a=1
          while [[ $a -le 2 ]]
          do
