@@ -149,7 +149,7 @@ Convert_bits () {
     echo "obase=2;$1" | bc
 }
 
-function instructions () {
+instructions () {
     printf "This is Txcat. This script that allows to send/receive files without configuring ports or ip addresses using ncat."
     printf " Command Summary:\n"
     printf " -s <path/filename>               Send <filename>. If the file is not in the current folder add the whole path e.g. (/home/folder1/filename.txt). \n"
@@ -179,7 +179,7 @@ while getopts ":sr:h" opt; do
          IPaddress=$(ifconfig $cur_interface | grep -w "inet" | sed -n -e 's/^.*inet //p' | awk '{print $1}')
          mask=$(ifconfig $cur_interface | grep -w "netmask" | sed -n -e 's/^.*netmask //p' | awk '{print $1}')
          Set_Port $IPaddress
-         #The port is opened twice: First for ip+port checking and then to receive the file
+         #The port is opened twice: First for ip+port checking and then to receive the file. The loop is left for future folder transmission implementation
          a=1
          while [[ $a -le 2 ]]
          do
