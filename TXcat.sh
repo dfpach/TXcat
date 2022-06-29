@@ -179,7 +179,7 @@ while getopts ":sr:h" opt; do
          IPaddress=$(ifconfig $cur_interface | grep -w "inet" | sed -n -e 's/^.*inet //p' | awk '{print $1}')
          mask=$(ifconfig $cur_interface | grep -w "netmask" | sed -n -e 's/^.*netmask //p' | awk '{print $1}')
          Set_Port $IPaddress
-         #The port is opened twice: First for ip+port checking and then to receive the file. The loop is left for future folder transmission implementation
+         #The port is opened twice: First for ip+port checking and then to receive the file. The loop is left for future implementation of folder transmission 
          a=1
          while [[ $a -le 2 ]]
          do
