@@ -150,7 +150,7 @@ Convert_bits () {
 }
 
 instructions () {
-    printf "This is Txcat. This script that allows to send/receive files without configuring ports or ip addresses using ncat."
+    printf "This is Txcat. This script allows to send/receive files without configuring ports or ip addresses using ncat."
     printf " Command Summary:\n"
     printf " -s <path/filename>               Send <filename>. If the file is not in the current folder add the whole path e.g. (/home/folder1/filename.txt). \n"
     printf " -r <filename>                    Receive file. Filename is mandatory. File will be saved in the current directory. \n"
